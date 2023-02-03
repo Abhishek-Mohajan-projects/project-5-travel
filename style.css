@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: static;
+    top: 0;
+    left: 0;
+    padding: 14px;
+    background: #282828
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 40px;
+    background: #E1E8EE;
+}
+
+.container .image img {
+	width: 50vw;
+}
+
+header .logo {
+    font-size: 30px;
+    color: #308879;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    margin-right: 20px;
+    animation: navLink 0.3s linear backwards;
+    animation-delay: calc(0.75 * var(--i));
+}
+
+@keyframes navLink {
+    0% {
+        transform: translateY(-50px) scale(0) rotate(-45deg);
+    }
+}
+
+header nav ul li  a {
+    font-size: 20px;
+    color: #308879;
+    transition: letter-spacing 0.3s;
+}
+
+header nav ul li  a:hover {
+    letter-spacing: 2px;
+}
+
+.container .content {
+    margin-top: -100px;
+    padding-left: 100px;
+}
+
+.container .image {
+	margin-top: 65px;
+}
+
+.container .content h1 {
+    color: #308879;
+    font-size: 80px;
+    letter-spacing: 2px;
+    animation: fadeIn 1s linear backwards;
+}
+
+.container .content h3 {
+    color: #308879;
+    font-size: 44px;
+    font-weight: 400;
+    animation: fadeIn 1s linear backwards;
+    animation-delay: 0.2s;
+}
+
+.container .content p {
+    color: #308879;
+    font-size: 15px;
+    padding: 20px 0;
+    line-height: 26px;
+    animation: fadeIn 1s linear backwards;
+    animation-delay: 0.3s;
+}
+
+.container .content button {
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 20px;
+    background-color: #308879;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 2px;
+    padding: 15px 20px;
+    animation: fadeIn 1s linear backwards;
+    animation-delay: 0.6s;
+    transition: 0.2s;
+}
+
+.container .content button:hover {
+    opacity: 0.8;
+    letter-spacing: 3px;
+}
+
+header nav ul li:last-child a {
+    background: #308879;
+    color: #fff;
+    padding:  10px 50px;
+    border-radius: 50px;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(-150px) scale(0) rotate(45deg);
+        transform-origin: left;
+    }
+    100% {
+        transform: translateY(0px) scale(1)  rotate(0deg);
+        transform-origin: left;
+    }
+}
+
+section {
+    margin-top: 20px;
+    height: 200%;
+    overflow-y: hidden;
+}
+
+.section-container {
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.section-container .image-content {
+	width: 80%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 30px;
+}
+
+.section-container .image-content img {
+    width: 100%;
+}
+
+.info {
+    margin-top: 30px;
+    height: 200vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.info-desc {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.info-desc .image {
+    width: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+
+.info-desc .image img {
+    width: 100%;
+}
+
+
+
+.info-desc .image h1 {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    z-index: 9;
+    font-size: 40px;
+    
+}
+
+.info-desc .image h1 a {
+    color: #fff;
+    transition: 0.5s;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+}
+
+.info-desc .info-content {
+   flex: 1 1 40rem;
+}
+
+.info-desc .info-content .left-desc h1 {
+    font-size: 1.5rem;
+    line-height: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.info-desc .info-content .left-desc h1 span {
+    color: #ff8f00;
+    background: transparent;
+    border: 2px solid #ff8f00;
+}
+
+.info-desc .info-content .left-desc h4 {
+    font-size: 1.5rem;
+    color: #ff8f00;
+    letter-spacing: 3px;
+    line-height: 40px;
+}
+
+.info-desc .info-content .left-desc p {
+    color: #828282;
+    font-weight: 600;
+    line-height: 35px;
+    text-align: justify;
+    text-transform: uppercase;
+}
+
+.info-desc .info-content .left-desc button {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 1rem 2rem;
+    border-radius: 14px;
+    border: 2px solid #ff8f00;
+    letter-spacing: 2px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.paragraph {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #282828;
+    color: #fff;
+    overflow: hidden;
+}
+
+.paragraph .para-content .heading {
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 3px;
+    border-bottom: 2px solid #308879;
+}
+
+.paragraph .para-content p {
+    margin-top: 12px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.paragraph .para-content {
+	width: 73%;
+}
+
+.footer {
+    height: 80vh;
+    width: 100%;
+    border-top: 2px solid #308879;
+    background: #282828;
+    min-width: 650px;
+}
+
+.footer .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.5rem;
+}
+
+.footer .icons .social i {
+    font-size: 25px;
+    margin-left: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer .icons .social i:hover {
+    color: #ff8f00;
+}
+
+
+
+.box {
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    transform-origin: bottom right;
+    background-image: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    animation: animate 6s linear infinite;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    transform-origin: bottom right;
+    background-image: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.form {
+    position: absolute;
+    padding: 50px 40px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    inset: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2 {
+    text-align: center;
+    color: #45f3ff;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.form .inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+}
+
+.inputBox input {
+    width: 100%;
+    position: relative;
+    padding: 20px 10px 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #23242a;
+    z-index: 10;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+}
+
+.inputBox span {
+    padding: 20px 0px 10px;
+    position: absolute;
+    left: 0;
+    color: #8f8f8f;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputBox input:focus ~ span, 
+.inputBox input:valid ~ span {
+
+    font-size: 0.75em;
+    color: #45f3ff;
+    transform: translateX(0px) translateY(-34px);
+}
+
+.inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #45f3ff;
+    height: 2px;
+    width: 100%;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 9;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.inputBox input:focus ~ i, 
+.inputBox input:valid ~ i {
+    height: 44px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links  a {
+    text-decoration: none;
+    color: #8f8f8f;
+    margin-top: 10px;
+    font-size: 0.75em;
+}
+
+.links  a:hover, 
+.links  a:nth-child(2) {
+    color: #45f3ff;
+}
+
+input[type="submit"] {
+    margin-top: 14px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 11px 25px;
+    border-radius: 4px;
+    background-color: #45f3ff;
+    font-weight: 600;
+    width: 100px;
+}
+
+input[type="submit"]:active {
+    opacity: 0.8;
+}
