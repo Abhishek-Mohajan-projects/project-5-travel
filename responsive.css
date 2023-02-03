@@ -203,6 +203,9 @@
 }
 
 @media only screen and (max-width: 414px) {
+    body {
+        overflow-x: hidden;
+    }
     header nav ul li a {
         font-size: 10px;
     }
@@ -230,7 +233,7 @@
         overflow-x: hidden;
     }
     .info-desc .info-content .left-desc h1 {
-        font-size: 15px;
+        font-size: 12px;
         letter-spacing: 0px;
     }
     .info-desc .info-content .left-desc h4 {
@@ -253,7 +256,7 @@
         margin-left: 63px;
     }
     .box {
-        margin-left: 34px;
-        margin-top: 0px;
+        margin-left: 25px;
+        margin-top: 35px;
     }
 } 
