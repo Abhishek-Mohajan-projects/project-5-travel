@@ -43,6 +43,9 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1045px) {
+    html, body {
+        overflow-x: hidden;
+    }
     header {
         justify-content: space-around;
     }
@@ -58,15 +61,22 @@
     .info-desc .image h1 {
         font-size: 27px;
     }
+    .paragraph .para-content p {
+        line-height: 32px;
+    }
+    .paragraph .para-content .heading {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
 
 
 }
 
 
-
-
-
 @media only screen and (max-width: 992px) {
+    html, body {
+        overflow-x: hidden;
+    }
     .container .content h3 {
         font-size: 32px;
     }
@@ -112,6 +122,9 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 811px) {
+    html, body {
+        overflow-x: hidden;
+    }
     .container .content h3 {
         font-size: 29px;
     }
@@ -140,6 +153,9 @@
 }
 
 @media only screen and (max-width: 567px) {
+    html, body {
+        overflow-x: hidden;
+    }
     header nav ul li:last-child a {
         padding: 10px 22px;
     }
@@ -203,7 +219,8 @@
 }
 
 @media only screen and (max-width: 414px) {
-    body {
+
+    html, body {
         overflow-x: hidden;
     }
     header nav ul li a {
